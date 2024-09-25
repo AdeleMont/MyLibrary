@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLibrary</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+    <main>
+        <section class="title">
+            <div class="title__wrapper">
+                <h1 class="title__caption">MyLibrary</h1>
+                <span class="title__description">Создавайте и редактируйте свой список книг</span>
+                <a class="title__button button" href="#start">Начать</a>
+            </div>
+
+            <img class="title__img" src="./images/hand-drawn-flat-design-stack-books-illustration.png"
+                alt="Изображение книг">
+
+        </section>
+
+        <section class="search" id="start">
+            <h3 class="search__title">Поиск книги по статусу:</h3>
+            <div>
+                <select id="statusFilter">
+                    <option value="all" id='all' selected>Все</option>
+                    <option value="read" id='isRead'>Прочитано</option>
+                    <option value="unread" id='isUnread'>Не прочитано</option>
+
+                </select>
+                <button class="button" type="button" id="statusBtn">Применить</button>
+            </div>
+
+
+        </section>
+        <section class="adding-book" id="add-book">
+            <h2>Добавить новую книгу:</h2>
+            <form action="">
+                <label for="title">Название:</label>
+                <input type="text" name="title" id="title" placeholder="Введите название" required>
+                <label for="author">Автор:</label>
+                <input type="text" name="author" id="author" placeholder="Введите автора" required>
+                <label for="year">Год издания:</label>
+                <input type="number" name="year" id="year" placeholder="Введите год издания">
+
+                <label for="genre">Жанр:</label>
+                <select name="genre" id="genre">
+                    <option value="Поэзия">Поэзия</option>
+                    <option value="Художественная литература">Художественная литература</option>
+                    <option value="Документальная литература">Документальная литература</option>
+                    <option value="Драма">Драма</option>
+                </select>
+
+                <label for="status" name="status">Статус:</label>
+                <select id="status">
+                    <option value="read">Прочитано</option>
+                    <option value="unread">Не прочитано</option>
+                </select>
+                <button class="button" type="button" onclick="addBook(this)">Добавить книгу</button>
+            </form>
+        </section>
+        <section>
+            <h2 class="list__title">Мои книги:</h2>
+            <ul id="book-list"></ul>
+
+            <p class="list__count">Всего книг: <span id="book-count"></span></p>
+            <div class="list__buttons">
+                <button class="button button__delete" onclick="refreshList()">Обновить и сбросить фильтры</button>
+                <button class="button " onclick="clearList()">Очистить список</button>
+            </div>
+        </section>
+    </main>
+    <script src="./scripts/script.js"></script>
+
+</body>
+
+</html>
