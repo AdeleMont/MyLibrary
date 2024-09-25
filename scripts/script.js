@@ -56,13 +56,13 @@ function renderList() {
 
 function deleteItem(button) {
   const div = button.parentElement;
-  const li = div.parentElement; // вот как здесь нормально до li добраться?
-  const index = Array.from(li.parentNode.children).indexOf(li); // Находим индекс удаляемого элемента
+  const li = div.parentElement; 
+  const index = Array.from(li.parentNode.children).indexOf(li); 
 
-  books.splice(index, 1); // Удаляем элемент из массива books
-  localStorage.setItem('books', JSON.stringify(books)); // Обновляем localStorage
-  li.remove(); // Удаляем элемент из DOM
-  renderList(); // Перерисовываем список
+  books.splice(index, 1); 
+  localStorage.setItem('books', JSON.stringify(books)); 
+  li.remove(); 
+  renderList(); 
 }
 
 function refreshList() {
@@ -171,7 +171,7 @@ function editItem(button) {
   });
 }
 
-// какой кошмар
+
 
 
 
