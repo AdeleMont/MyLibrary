@@ -1,0 +1,149 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  border: 1px #62cee8 solid;
+  border-radius: 20px;
+  padding: 7px 12px;
+  margin-right: 20px;
+margin-bottom: 10px;
+}
+
+input:active,
+input:hover,
+input:active,
+input:hover {
+  border: 1px #4ba1b7 solid;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px rgb(178, 213, 255) solid;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.book-item {
+  display: block;
+  box-sizing:border-box;
+  width:auto;
+  max-width:1000px;
+  }
+  
+
+  .hidden {
+    display: none;
+  }
+
+
+.form {
+  margin-bottom: 30px;
+}  
+
+.title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 100px;
+  min-height: 100vh;
+}
+
+.title__wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title__img {
+  max-width: 45%;
+  display: block;
+}
+
+.title__caption {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+.title__description {
+  color: rgb(114, 114, 114);
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.title__button {
+  display: block;
+  text-decoration: none;
+  width: 150px;
+}
+
+.button {
+  font-size: 16px;
+  color: white;
+  border-radius: 40px;
+  padding: 10px 20px;
+  min-width: 150px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #06a28c;
+  border: none;
+}
+
+.button:hover {
+  background-color: #048e7b;
+}
+
+.button__delete {
+  background-color: #ffb846;
+}
+
+.button__delete:hover {
+  background-color: #f2a120;
+}
+
+.search {
+  display: flex;
+  padding: 0 30px;
+  align-items: center;
+}
+
+.search__title {
+  margin-right: 50px;
+}
+
+.adding-book {
+  padding: 30px 30px 50px 30px;
+  margin-bottom: 50px;
+  background-color: #c3ebf5;
+}
+
+.list__count {
+  margin-bottom: 40px;
+  padding: 0 30px;
+}
+
+.list__title {
+  padding: 0 30px;
+}
+
+.list__buttons {
+  padding: 0 30px;
+  margin-bottom: 70px;
+}
